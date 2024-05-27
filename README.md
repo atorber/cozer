@@ -6,7 +6,14 @@
 
 Cozer非官方coze SDK，基于coze API快速接入自己的业务系统
 
-- TBD
+- 获取bot列表
+- 获取bot详情
+- 启停bot
+- 添加bot
+- 对话bot
+- 查询bot对话列表
+- 查询bot对话历史
+- ...
 
 ## 快速入门
 
