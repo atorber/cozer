@@ -4,9 +4,8 @@
 import 'dotenv/config.js'
 import { Contact, Message, ScanStatus, WechatyBuilder, log } from 'wechaty'
 import { FileBox } from 'file-box'
-import { PuppetBridgeJwpingWxbotV3090825 as PuppetBridge } from 'wechaty-puppet-bridge'
 import qrcodeTerminal from 'qrcode-terminal'
-import { CozeBot, ChatV2Req } from './coze.js'
+import { CozeBot, ChatV2Req } from '../src/coze.js'
 
 const token = process.env['WECHATY_TOKEN']
 const puppet = process.env['WECHATY_PUPPET']
@@ -123,9 +122,6 @@ switch (puppet) {
     break
   case 'wechaty-puppet-padlocal':
     ops.puppetOptions = { token }
-    break
-  case 'wechaty-puppet-bridge':
-    ops.puppet = new PuppetBridge()
     break
   default:
     log.info('不支持的puppet')
